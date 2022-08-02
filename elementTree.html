@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #main {
+            background-color: aqua;
+            padding: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body id="body">
+    <div id="main"></div>
+
+    <script>
+        let randomID = Math.floor(Math.random());
+
+        const body = document.getElementById('body');
+
+        body.addEventListener('click', (event) => {
+            const elem = event.srcElement
+
+            if (event.ctrlKey) {
+                elem.remove()
+                return
+            }
+
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+
+            let newElement = document.createElement("div");
+            newElement.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            newElement.style.padding = "20px 20px 20px 20px";
+            newElement.setAttribute("id", randomID)
+            elem.append(newElement)
+        })
+    </script>
+</body>
+</html>
