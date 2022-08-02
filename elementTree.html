@@ -16,16 +16,10 @@
     <div id="main"></div>
 
     <script>
-
         const body = document.getElementById('body');
 
         body.addEventListener('click', (event) => {
             const elem = event.srcElement
-
-            if (event.ctrlKey) {
-                elem.remove()
-                return
-            }
 
             let r = Math.floor(Math.random() * 255);
             let g = Math.floor(Math.random() * 255);
