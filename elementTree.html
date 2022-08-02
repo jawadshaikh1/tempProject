@@ -20,8 +20,8 @@
 
         const body = document.getElementById('body');
 
-        body.addEventListener('click', (event) => {
-            const elem = event.srcElement
+        body.addEventListener('click', (e) => {
+            const elem = e.srcElement
 
             if (event.ctrlKey) {
                 elem.remove()
